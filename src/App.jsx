@@ -170,13 +170,13 @@ function App() {
           <div className="hero-inner">
             <h1>Adam Bicknell</h1>
             <p className="subtitle">
-              Software engineer, builder, and founder of Bicknell Digital.
+              Software engineer, entrepreneur, writer, creator and founder.
             </p>
             <span className="divider" aria-hidden="true" />
             <p className="intro">
-              I build practical software for real business workflows, write
-              about technology and life, and help businesses grow through
-              digital solutions.
+              This is the home for my work, ideas and projects across
+              technology, business, books, videos, personal growth, spirituality
+              and the esoteric.
             </p>
           </div>
         </section>
