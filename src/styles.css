@@ -273,9 +273,17 @@ a {
   line-height: 1.52;
 }
 
+.hub-card-description {
+  margin: 1rem 0 0;
+  max-width: 315px;
+  color: #1f2937;
+  font-size: 1.03rem;
+  line-height: 1.52;
+}
+
 .card-button {
   width: min(100%, 290px);
-  margin-top: auto;
+  margin-top: 1.5rem;
   padding: 0.9rem 1.25rem;
   border-radius: 7px;
   display: inline-flex;

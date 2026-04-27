@@ -16,14 +16,15 @@ import {
   InstagramIcon,
   TikTokIcon,
 } from "./components/Icons.jsx";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const currentYear = new Date().getFullYear();
 
 const cards = [
   {
-    title: "Developer Portfolio",
+    title: "Dev Portfolio",
     description:
-      "Portfolio for Full Stack React, TypeScript, Python, APIs, cloud systems, internal tools, SaaS platforms and more.",
+      "Portfolio for Full Stack React, TypeScript, Python, APIs, cloud systems, tools, SaaS platforms etc.",
     href: "https://dev.bicknell.uk",
     cta: "dev.bicknell.uk",
     tone: "lightblue",
@@ -124,7 +125,7 @@ function Header() {
   );
 }
 
-function HubCard({ card }) {
+function HubCard({ card, descriptionRef, descriptionHeight }) {
   const Icon = card.icon;
 
   return (
@@ -134,7 +135,18 @@ function HubCard({ card }) {
       </div>
 
       <h2>{card.title}</h2>
-      <p>{card.description}</p>
+
+      <p
+        ref={descriptionRef}
+        className="hub-card-description"
+        style={
+          descriptionHeight
+            ? { minHeight: `${descriptionHeight}px` }
+            : undefined
+        }
+      >
+        {card.description}
+      </p>
 
       <a className="card-button" href={card.href}>
         <span>{card.cta}</span>
@@ -153,6 +165,7 @@ function SocialLink({ social }) {
       href={social.href}
       aria-label={social.name}
       target="_blank"
+      rel="noreferrer"
       title={social.name}
     >
       <Icon />
@@ -160,7 +173,61 @@ function SocialLink({ social }) {
   );
 }
 
+function useEqualCardDescriptionHeights(items) {
+  const descriptionRefs = useRef([]);
+  const [descriptionHeight, setDescriptionHeight] = useState(0);
+
+  const setDescriptionRef = useCallback(
+    (index) => (node) => {
+      descriptionRefs.current[index] = node;
+    },
+    [],
+  );
+
+  useEffect(() => {
+    const descriptions = descriptionRefs.current.filter(Boolean);
+
+    if (!descriptions.length) {
+      return undefined;
+    }
+
+    const updateHeight = () => {
+      descriptions.forEach((description) => {
+        description.style.minHeight = "0px";
+      });
+
+      const tallestHeight = Math.ceil(
+        Math.max(
+          ...descriptions.map((description) => description.scrollHeight),
+        ),
+      );
+
+      setDescriptionHeight(tallestHeight);
+    };
+
+    const resizeObserver = new ResizeObserver(updateHeight);
+
+    descriptions.forEach((description) => {
+      resizeObserver.observe(description);
+    });
+
+    updateHeight();
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [items]);
+
+  return {
+    descriptionHeight,
+    setDescriptionRef,
+  };
+}
+
 function App() {
+  const { descriptionHeight, setDescriptionRef } =
+    useEqualCardDescriptionHeights(cards);
+
   return (
     <div className="page-shell">
       <Header />
@@ -182,8 +249,13 @@ function App() {
         </section>
 
         <section className="hub-grid" aria-label="Main links">
-          {cards.map((card) => (
-            <HubCard key={card.title} card={card} />
+          {cards.map((card, index) => (
+            <HubCard
+              key={card.title}
+              card={card}
+              descriptionRef={setDescriptionRef(index)}
+              descriptionHeight={descriptionHeight}
+            />
           ))}
         </section>
       </main>
