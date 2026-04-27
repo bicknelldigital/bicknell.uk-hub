@@ -11,70 +11,73 @@ import {
   MailIcon,
   UserIcon,
   XIcon,
-  YouTubeIcon
-} from './components/Icons.jsx'
+  YouTubeIcon,
+} from "./components/Icons.jsx";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 const cards = [
   {
-    title: 'Developer Portfolio',
-    description: 'My focused software engineering portfolio. Full stack React, TypeScript, Python, APIs, cloud systems, internal tools, SaaS platforms and more.',
-    href: 'https://dev.bicknell.uk',
-    cta: 'Visit dev.bicknell.uk',
-    tone: 'blue',
-    icon: CodeIcon
+    title: "Developer Portfolio",
+    description:
+      "Portfolio for Full Stack React, TypeScript, Python, APIs, cloud systems, internal tools, SaaS platforms and more.",
+    href: "https://dev.bicknell.uk",
+    cta: "dev.bicknell.uk",
+    tone: "blue",
+    icon: CodeIcon,
   },
   {
-    title: 'Personal Site',
-    description: 'Articles, videos, books, projects and thoughts on technology, productivity, business and life.',
-    href: 'https://adam.bicknell.uk',
-    cta: 'Visit adam.bicknell.uk',
-    tone: 'green',
-    icon: BookIcon
+    title: "Personal Site",
+    description:
+      "Articles, videos, books, projects and thoughts on technology, productivity, business and life.",
+    href: "https://adam.bicknell.uk",
+    cta: "adam.bicknell.uk",
+    tone: "green",
+    icon: BookIcon,
   },
   {
-    title: 'Bicknell Digital',
-    description: 'Websites, digital systems, e-commerce, consulting and ongoing digital support for businesses.',
-    href: 'https://www.bicknelldigital.co.uk',
-    cta: 'Visit bicknelldigital.co.uk',
-    tone: 'brand',
-    icon: BriefcaseIcon
-  }
-]
+    title: "Bicknell Digital",
+    description:
+      "Websites, digital systems, e-commerce, consulting and ongoing digital support for businesses.",
+    href: "https://www.bicknelldigital.co.uk",
+    cta: "bicknelldigital.co.uk",
+    tone: "brand",
+    icon: BriefcaseIcon,
+  },
+];
 
 const socials = [
   {
-    name: 'GitHub',
-    href: 'https://github.com/adambicknell',
-    icon: GitHubIcon
+    name: "GitHub",
+    href: "https://github.com/adambicknell",
+    icon: GitHubIcon,
   },
   {
-    name: 'GitLab',
-    href: 'https://gitlab.com/adambicknell',
-    icon: GitLabIcon
+    name: "GitLab",
+    href: "https://gitlab.com/adambicknell",
+    icon: GitLabIcon,
   },
   {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/adamrbicknell',
-    icon: LinkedInIcon
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/adamrbicknell",
+    icon: LinkedInIcon,
   },
   {
-    name: 'YouTube',
-    href: 'https://www.youtube.com/',
-    icon: YouTubeIcon
+    name: "YouTube",
+    href: "https://www.youtube.com/",
+    icon: YouTubeIcon,
   },
   {
-    name: 'X',
-    href: 'https://x.com/',
-    icon: XIcon
+    name: "X",
+    href: "https://x.com/",
+    icon: XIcon,
   },
   {
-    name: 'Website',
-    href: 'https://adam.bicknell.uk',
-    icon: GlobeIcon
-  }
-]
+    name: "Website",
+    href: "https://adam.bicknell.uk",
+    icon: GlobeIcon,
+  },
+];
 
 function Header() {
   return (
@@ -99,11 +102,11 @@ function Header() {
         </a>
       </nav>
     </header>
-  )
+  );
 }
 
 function HubCard({ card }) {
-  const Icon = card.icon
+  const Icon = card.icon;
 
   return (
     <article className={`hub-card hub-card-${card.tone}`}>
@@ -119,17 +122,17 @@ function HubCard({ card }) {
         <ArrowIcon />
       </a>
     </article>
-  )
+  );
 }
 
 function SocialLink({ social }) {
-  const Icon = social.icon
+  const Icon = social.icon;
 
   return (
     <a className="social-link" href={social.href} aria-label={social.name}>
       <Icon />
     </a>
-  )
+  );
 }
 
 function App() {
@@ -141,16 +144,20 @@ function App() {
         <section className="hero">
           <div className="hero-inner">
             <h1>Adam Bicknell</h1>
-            <p className="subtitle">Software engineer, builder, and founder of Bicknell Digital.</p>
+            <p className="subtitle">
+              Software engineer, builder, and founder of Bicknell Digital.
+            </p>
             <span className="divider" aria-hidden="true" />
             <p className="intro">
-              I build practical software for real business workflows, write about technology and life, and help businesses grow through digital solutions.
+              I build practical software for real business workflows, write
+              about technology and life, and help businesses grow through
+              digital solutions.
             </p>
           </div>
         </section>
 
         <section className="hub-grid" aria-label="Main links">
-          {cards.map(card => (
+          {cards.map((card) => (
             <HubCard key={card.title} card={card} />
           ))}
         </section>
@@ -160,7 +167,7 @@ function App() {
         <p>Connect with me</p>
 
         <div className="social-links">
-          {socials.map(social => (
+          {socials.map((social) => (
             <SocialLink key={social.name} social={social} />
           ))}
         </div>
@@ -168,7 +175,7 @@ function App() {
         <small>© {currentYear} Adam Bicknell. All rights reserved.</small>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
