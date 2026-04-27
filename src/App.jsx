@@ -251,8 +251,9 @@ function App() {
               <span className="divider" aria-hidden="true" />
               <p className="intro">
                 This is the home for my work, ideas and projects across
-                technology, business, books, videos, personal growth,
-                spirituality and the esoteric.
+                technology, business, books, videos, personal development,
+                motivation, spirituality, psychology, philosophy and deeper
+                esoteric thought.
               </p>
             </div>
           </div>
