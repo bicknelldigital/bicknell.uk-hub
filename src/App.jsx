@@ -23,7 +23,7 @@ const cards = [
       "Portfolio for Full Stack React, TypeScript, Python, APIs, cloud systems, internal tools, SaaS platforms and more.",
     href: "https://dev.bicknell.uk",
     cta: "dev.bicknell.uk",
-    tone: "blue",
+    tone: "lightblue",
     icon: CodeIcon,
   },
   {
@@ -32,7 +32,7 @@ const cards = [
       "Articles, videos, books, projects and thoughts on technology, productivity, business and life.",
     href: "https://adam.bicknell.uk",
     cta: "adam.bicknell.uk",
-    tone: "green",
+    tone: "blue",
     icon: BookIcon,
   },
   {
