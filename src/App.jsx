@@ -13,6 +13,8 @@ import {
   XIcon,
   YouTubeIcon,
   FacebookIcon,
+  InstagramIcon,
+  TikTokIcon,
 } from "./components/Icons.jsx";
 
 const currentYear = new Date().getFullYear();
@@ -60,26 +62,37 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.facebook.com/dambicknell",
-    icon: FacebookIcon,
-  },
-  {
-    name: "LinkedIn",
     href: "https://www.linkedin.com/in/adamrbicknell",
     icon: LinkedInIcon,
   },
   {
-    name: "YouTube",
-    href: "https://www.youtube.com/",
-    icon: YouTubeIcon,
+    name: "Facebook",
+    href: "https://www.facebook.com/dambicknell",
+    icon: FacebookIcon,
   },
   {
+    name: "Instagram",
+    href: "https://www.instagram.com/dambicknell",
+    icon: InstagramIcon,
+  },
+  // {
+  //   name: "YouTube",
+  //   href: "https://www.youtube.com/",
+  //   icon: YouTubeIcon,
+  // },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/dambicknell",
+    icon: TikTokIcon,
+  },
+
+  {
     name: "X",
-    href: "https://x.com/",
+    href: "https://x.com/dambicknell",
     icon: XIcon,
   },
   {
-    name: "Website",
+    name: "Personal Website",
     href: "https://adam.bicknell.uk",
     icon: GlobeIcon,
   },
@@ -135,7 +148,13 @@ function SocialLink({ social }) {
   const Icon = social.icon;
 
   return (
-    <a className="social-link" href={social.href} aria-label={social.name}>
+    <a
+      className="social-link"
+      href={social.href}
+      aria-label={social.name}
+      target="_blank"
+      title={social.name}
+    >
       <Icon />
     </a>
   );
