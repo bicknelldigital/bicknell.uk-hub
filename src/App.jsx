@@ -112,10 +112,6 @@ function Header() {
           <HomeIcon />
           Home
         </a>
-        <a className="nav-link" href="https://adam.bicknell.uk/about">
-          <UserIcon />
-          About
-        </a>
         <a className="nav-link" href="mailto:adam@bicknell.uk">
           <MailIcon />
           Contact
