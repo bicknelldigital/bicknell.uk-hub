@@ -235,16 +235,26 @@ function App() {
       <main>
         <section className="hero">
           <div className="hero-inner">
-            <h1>Adam Bicknell</h1>
-            <p className="subtitle">
-              Software engineer, entrepreneur, writer, creator and founder.
-            </p>
-            <span className="divider" aria-hidden="true" />
-            <p className="intro">
-              This is the home for my work, ideas and projects across
-              technology, business, books, videos, personal growth, spirituality
-              and the esoteric.
-            </p>
+            <img
+              className="profile-image"
+              src="/adam.jpg"
+              alt="Adam Bicknell"
+              width="150"
+              height="150"
+            />
+
+            <div className="hero-copy">
+              <h1>Adam Bicknell</h1>
+              <p className="subtitle">
+                Software engineer, entrepreneur, writer, creator and founder.
+              </p>
+              <span className="divider" aria-hidden="true" />
+              <p className="intro">
+                This is the home for my work, ideas and projects across
+                technology, business, books, videos, personal growth,
+                spirituality and the esoteric.
+              </p>
+            </div>
           </div>
         </section>
 
