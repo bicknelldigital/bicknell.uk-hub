@@ -138,7 +138,12 @@ function HubCard({ card, descriptionRef, descriptionHeight }) {
         {card.description}
       </p>
 
-      <a className="card-button" href={card.href}>
+      <a
+        className="card-button"
+        href={card.href}
+        target="_blank"
+        rel="noreferrer"
+      >
         <span>{card.cta}</span>
         <ArrowIcon />
       </a>
