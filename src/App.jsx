@@ -6,10 +6,8 @@ import {
   GitHubIcon,
   GitLabIcon,
   GlobeIcon,
-  HomeIcon,
   LinkedInIcon,
   MailIcon,
-  UserIcon,
   XIcon,
   YouTubeIcon,
   FacebookIcon,
@@ -33,7 +31,7 @@ const cards = [
   {
     title: "Personal Site",
     description:
-      "Articles, videos, books, projects and thoughts on technology, productivity, business and life.",
+      "Articles, books, videos and thoughts on technology, business, personal growth and deeper thought.",
     href: "https://adam.bicknell.uk",
     cta: "adam.bicknell.uk",
     tone: "blue",
@@ -83,7 +81,7 @@ const socials = [
   // },
   {
     name: "TikTok",
-    href: "https://www.tiktok.com/dambicknell",
+    href: "https://www.tiktok.com/@dambicknell",
     icon: TikTokIcon,
   },
 
@@ -108,10 +106,6 @@ function Header() {
       </a>
 
       <nav className="nav-links" aria-label="Main navigation">
-        <a className="nav-link nav-link-active" href="/">
-          <HomeIcon />
-          Home
-        </a>
         <a className="nav-link" href="mailto:adam@bicknell.uk">
           <MailIcon />
           Contact
@@ -246,10 +240,9 @@ function App() {
               </p>
               <span className="divider" aria-hidden="true" />
               <p className="intro">
-                This is the home for my work, ideas and projects across
-                technology, business, books, videos, personal development,
-                motivation, spirituality, psychology, philosophy and deeper
-                esoteric thought.
+                My work, ideas and projects across technology, business, books,
+                videos, personal development, motivation, spirituality,
+                psychology, philosophy and deeper esoteric thought.
               </p>
             </div>
           </div>

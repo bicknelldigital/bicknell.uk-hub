@@ -3,12 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adam Bicknell's personal hub for development, personal projects, writing, and Bicknell Digital." />
+    <meta
+      name="description"
+      content="Adam Bicknell is a software engineer, entrepreneur, writer, creator and founder. Bicknell.uk brings together his work, ideas and projects across technology, business, books, videos, personal development, spirituality, psychology, philosophy and esoteric thought."
+    />
     <meta name="theme-color" content="#1a2035" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bicknell.uk | Adam Bicknell" />
+    <meta
+      property="og:description"
+      content="The personal hub for Adam Bicknell's work, ideas and projects across technology, business, books, videos, personal development, spirituality, psychology, philosophy and esoteric thought."
+    />
+    <meta property="og:url" content="https://bicknell.uk/" />
+    <meta property="og:image" content="https://bicknell.uk/adam.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bicknell.uk | Adam Bicknell" />
+    <meta
+      name="twitter:description"
+      content="The personal hub for Adam Bicknell's work, ideas and projects across technology, business, books, videos, personal development, spirituality, psychology, philosophy and esoteric thought."
+    />
+    <meta name="twitter:image" content="https://bicknell.uk/adam.jpg" />
+    <link rel="canonical" href="https://bicknell.uk/" />
     <title>Adam Bicknell | bicknell.uk</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://bicknell.uk/#website",
+            "url": "https://bicknell.uk/",
+            "name": "Bicknell.uk",
+            "alternateName": "Adam Bicknell Hub",
+            "description": "The personal hub for Adam Bicknell's work, ideas and projects across technology, business, books, videos, personal development, spirituality, psychology, philosophy and esoteric thought.",
+            "inLanguage": "en-GB",
+            "publisher": {
+              "@id": "https://bicknell.uk/#person"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://bicknell.uk/#webpage",
+            "url": "https://bicknell.uk/",
+            "isPartOf": {
+              "@id": "https://bicknell.uk/#website"
+            },
+            "name": "Bicknell.uk | Adam Bicknell",
+            "description": "A central hub linking Adam Bicknell's developer portfolio, personal site, business site and social profiles.",
+            "inLanguage": "en-GB",
+            "about": {
+              "@id": "https://bicknell.uk/#person"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "@id": "https://bicknell.uk/adam.jpg",
+              "url": "https://bicknell.uk/adam.jpg"
+            },
+            "mainEntity": {
+              "@id": "https://bicknell.uk/#person"
+            },
+            "mentions": [
+              {
+                "@id": "https://dev.bicknell.uk/#website"
+              },
+              {
+                "@id": "https://adam.bicknell.uk/#website"
+              },
+              {
+                "@id": "https://www.bicknelldigital.co.uk/#organization"
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://bicknell.uk/#person",
+            "name": "Adam Bicknell",
+            "url": "https://bicknell.uk/",
+            "image": "https://bicknell.uk/adam.jpg",
+            "jobTitle": "Software Engineer",
+            "description": "Software engineer, entrepreneur, writer, creator and founder.",
+            "email": "mailto:adam@bicknell.uk",
+            "sameAs": [
+              "https://adam.bicknell.uk/",
+              "https://dev.bicknell.uk/",
+              "https://www.bicknelldigital.co.uk/",
+              "https://github.com/adambicknell",
+              "https://gitlab.com/adamb-linelab",
+              "https://www.linkedin.com/in/adamrbicknell",
+              "https://www.facebook.com/dambicknell",
+              "https://www.instagram.com/dambicknell",
+              "https://www.tiktok.com/@dambicknell",
+              "https://x.com/dambicknell"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dev.bicknell.uk/#website",
+            "url": "https://dev.bicknell.uk/",
+            "name": "Adam Bicknell Developer Portfolio",
+            "description": "Adam Bicknell's software engineering portfolio."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://adam.bicknell.uk/#website",
+            "url": "https://adam.bicknell.uk/",
+            "name": "Adam Bicknell Personal Site",
+            "description": "Adam Bicknell's personal site for articles, books, videos, projects and ideas."
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.bicknelldigital.co.uk/#organization",
+            "name": "Bicknell Digital",
+            "url": "https://www.bicknelldigital.co.uk/"
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
