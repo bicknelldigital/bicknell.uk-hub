@@ -2,13 +2,11 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-inner">
-        <img
-          className="profile-image"
-          src="/adam.jpg"
-          alt="Adam Bicknell"
-          width="150"
-          height="150"
-        />
+        <div className="profile-image photo-cutout photo-cutout-tall">
+          <div className="photo-frame photo-frame-tall photo-frame-curved">
+            <img src="/adam.jpg" alt="Adam Bicknell" width="320" height="445" />
+          </div>
+        </div>
 
         <div className="hero-copy">
           <h1>Adam Bicknell</h1>
